@@ -10,7 +10,7 @@
   "dependencies": {
     "flow-bin": "^0.41.0",
     "lodash": "^4.17.4",
-    "node-sass": "^4.5.0",
+    "node-sass": "latest",
     "npm-run-all": "^4.0.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
