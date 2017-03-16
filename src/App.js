@@ -16,7 +16,7 @@ class App extends Component {
           <h2>Welcome to Hell</h2>
         </div>
         <p className="App-intro">
-          To get rolling, edit <code>src/App.js</code> and save to reload.
+          Let's get rolling!
         </p>
       </div>
     );
