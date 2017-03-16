@@ -1,0 +1,4 @@
+service: backend
+runtime: python
+env: flex
+entrypoint: gunicorn hello:app --pythonpath api
