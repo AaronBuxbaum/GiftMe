@@ -1,5 +1,7 @@
 sudo: false
 language: node_js
+node_js:
+  - 6
 cache:
   directories:
   - node_modules
@@ -11,8 +13,8 @@ before_install:
 install:
 - pip install -r requirements.txt -t lib/
 script:
-- yarn test
-- yarn build
+- npm test
+- npm build
 deploy:
   provider: gae
   skip_cleanup: true
