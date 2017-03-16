@@ -22,6 +22,5 @@ deploy:
   keyfile: client-secret.json
   project: giftme-161622
   default: true
-  version: default
   on:
     all_branches: true
