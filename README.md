@@ -6,6 +6,16 @@ _by Aaron Buxbaum_
 A better way to buy gifts, via the power of machine learning.
 
 
+# To Use #
+ - `yarn start-server` to spin up the backend
+ - `yarn start` to run frontend locally
+ - `yarn build` to compile
+ - `yarn test` to run tests
+ - `gcloud app deploy` to deploy to Google Cloud Platform
+To develop, run `yarn start-server` and `yarn start` in parallel.
+To deploy, run `yarn build` and then `gcloud app deploy`.
+
+
 *Useful VS Code extensions*
  - `ext install debugger-for-chrome`
  - `ext install vscode-jest`
