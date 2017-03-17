@@ -12,8 +12,9 @@ A better way to buy gifts, via the power of machine learning.
  - `yarn build` to compile
  - `yarn test` to run tests
  - `gcloud app deploy` to deploy to Google Cloud Platform
+
 To develop, run `yarn start-server` and `yarn start` in parallel.
-To deploy, run `yarn build` and then `gcloud app deploy`.
+
 
 
 *Useful VS Code extensions*

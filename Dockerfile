@@ -2,7 +2,7 @@ FROM node:6
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
 
 RUN apt-get update -y
-RUN apt-get install -y python python-dev python-pip gunicorn
+RUN apt-get install -y python python-dev python-pip
 
 COPY . /app
 WORKDIR /app
