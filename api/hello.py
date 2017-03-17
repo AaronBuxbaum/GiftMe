@@ -1,4 +1,6 @@
 from flask import Flask
+import tensorflow as tf
+
 app = Flask(__name__,
             static_url_path='', 
             static_folder='../build')
@@ -11,7 +13,9 @@ def root():
 
 @app.route("/api/test")
 def test():
-    return "Testing"
+    hello = tf.constant('TensorFlow is working!')
+    sess = tf.Session()
+    return sess.run(hello)
 
 
 if __name__ == "__main__":
