@@ -12,7 +12,6 @@ before_install:
 install:
 - pip install -r requirements.txt -t lib/
 script:
-- npm rebuild node-sass
 - npm test
 - npm run build
 deploy:
