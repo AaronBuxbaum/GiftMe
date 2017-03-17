@@ -11,5 +11,3 @@ RUN pip install -r requirements.txt
 RUN npm install
 RUN npm rebuild node-sass
 RUN npm run build
-
-RUN python api/hello.py

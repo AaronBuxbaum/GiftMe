@@ -1,2 +1,5 @@
 runtime: custom
 env: flex
+handlers:
+- url: .*
+  script: api/hello.app
