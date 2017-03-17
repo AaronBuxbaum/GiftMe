@@ -1,8 +1,8 @@
 FROM node:6
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
 
-RUN apt-get update -y
-RUN apt-get install -y python python-dev python-pip
+RUN apt-get update -y -qq
+RUN apt-get install -y -qq python python-dev python-pip
 
 COPY . /app
 WORKDIR /app
