@@ -1,4 +1,4 @@
-FROM node:7
+FROM node:6
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
 
 RUN apt-get update -y
