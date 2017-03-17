@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import tensorflow as tf
 
 app = Flask(__name__,
@@ -11,12 +11,12 @@ def root():
   return app.send_static_file('index.html')
 
 
-@app.route("/api/test")
+@app.route('/api/test')
 def test():
     hello = tf.constant('TensorFlow is working!')
     sess = tf.Session()
-    return sess.run(hello)
+    return jsonify(sess.run(hello))
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(port=8080)
