@@ -1,3 +1,0 @@
-service: frontend
-runtime: nodejs
-env: flex
