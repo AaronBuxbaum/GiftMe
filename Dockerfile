@@ -11,6 +11,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN npm install --silent
 RUN npm rebuild node-sass
+
 RUN npm run build
 
 ENTRYPOINT gunicorn hello:app --pythonpath api
