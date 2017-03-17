@@ -2,8 +2,6 @@ sudo: required
 services:
   - docker
 language: node_js
-env:
-  - CI: true
 node_js: 6
 cache:
   directories:
@@ -15,7 +13,7 @@ before_install:
 install:
   - docker build . -t gift-me
 script:
-  - docker run --entrypoint npm gift-me test
+  - docker run --entrypoint npm -e CI=true gift-me test
 deploy:
   provider: gae
   skip_cleanup: true
