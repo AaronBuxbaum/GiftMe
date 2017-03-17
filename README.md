@@ -13,7 +13,9 @@ A better way to buy gifts, via the power of machine learning.
  - `yarn test` to run tests
  - `gcloud app deploy` to deploy to Google Cloud Platform
 
-To develop, run `yarn start-server` and `yarn start` in parallel.
+To develop:
+Create image: `docker build -t aaronbuxbaum/gift-me -f Dockerfile-dev .`
+Start image: `docker run -t aaronbuxbaum/gift-me`
 
 
 
