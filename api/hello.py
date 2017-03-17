@@ -15,7 +15,8 @@ def root():
 def test():
     hello = tf.constant('TensorFlow is working!')
     sess = tf.Session()
-    return jsonify(sess.run(hello))
+    return_value = sess.run(hello)
+    return jsonify(return_value)
 
 
 if __name__ == '__main__':
