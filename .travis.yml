@@ -3,7 +3,7 @@ services:
   - docker
 language: node_js
 env:
-  - CI=true
+  - CI: true
 node_js: 6
 cache:
   directories:
