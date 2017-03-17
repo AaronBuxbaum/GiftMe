@@ -7,6 +7,7 @@ RUN apt-get install -y -qq python python-dev python-pip
 COPY . /app
 WORKDIR /app
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN npm install --silent
 RUN npm rebuild node-sass
