@@ -19,7 +19,6 @@ deploy:
   skip_cleanup: true
   keyfile: client-secret.json
   project: giftme-161622
-  default: false
   version: dev
   on:
     all_branches: true
