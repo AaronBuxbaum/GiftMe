@@ -16,7 +16,6 @@ script:
 #- npm run build
 deploy:
   provider: gae
-  config: frontend.gce.yaml
   skip_cleanup: true
   keyfile: client-secret.json
   project: giftme-161622
