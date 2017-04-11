@@ -14,8 +14,11 @@ A better way to buy gifts, via the power of machine learning.
  - `gcloud app deploy` to deploy to Google Cloud Platform
 
 To develop:
+
 Create image: `docker build -t aaronbuxbaum/gift-me -f Dockerfile-dev .`
-Start image: `docker run -t aaronbuxbaum/gift-me`
+Set up network: `docker network create --subnet=172.18.0.0/16 dockernetwork`
+Start image: `docker run --net dockernetwork --ip 172.18.0.22 -t aaronbuxbaum/gift-me`
+Browser URL: `http://172.18.0.22:3000/`
 
 
 
