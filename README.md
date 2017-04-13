@@ -17,8 +17,8 @@ To develop:
 
 Create image: `docker build -t aaronbuxbaum/gift-me -f Dockerfile-dev .`
 Set up network: `docker network create --subnet=172.18.0.0/16 dockernetwork`
-Start image: `docker run --net dockernetwork --ip 172.18.0.22 -t aaronbuxbaum/gift-me`
-Browser URL: `http://172.18.0.22:3000/`
+Start image: `docker run --net dockernetwork --ip 172.18.0.22 -p 3000:3000 -t aaronbuxbaum/gift-me`
+Browser URL: `localhost:3000/`
 
 
 

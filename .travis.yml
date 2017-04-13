@@ -1,14 +1,14 @@
 sudo: required
 services:
-  - docker
+- docker
 before_install:
-  - openssl aes-256-cbc -K $encrypted_35fbdff035d9_key -iv $encrypted_35fbdff035d9_iv
-    -in credentials.tar.gz.enc -out credentials.tar.gz -d
-  - tar -xzf credentials.tar.gz
+- openssl aes-256-cbc -K $encrypted_35fbdff035d9_key -iv $encrypted_35fbdff035d9_iv
+  -in credentials.tar.gz.enc -out credentials.tar.gz -d
+- tar -xzf credentials.tar.gz
 install:
-  - docker build . -t gift-me
+- docker build . -t gift-me
 script:
-  - docker run --entrypoint npm -e CI=true gift-me test
+- docker run --entrypoint npm -e CI=true gift-me test
 deploy:
   provider: gae
   skip_cleanup: true
@@ -19,3 +19,6 @@ deploy:
   no_promote: true
   on:
     all_branches: true
+notifications:
+  slack:
+    secure: CmgBosLlry3xkPQ1OA7Gi3wRUBwXOSzwq+RRdXl2QRlaPd3B/e/SrH4aPssazELGW4zfIrVyyI4GFYTw5PYGu0YS9BkbgroaPk4X/lutCq3eCv65U8waN43FVkGdf5PAzHKqTqmyCMatDX3lfPdCVoL2pCXHQdAxKeiCDLpdAWy9Jt1TwZfAoXisvS3OWA8amiZKC6QvSHOSiTdUnTknr9p3HOB4M1CN3/1bBfNn49SHyPtfH+HJGZ6SE5JFnSQq7LmMLUHhRUk3ogu+OqXXITSbF+PpfFb3MScVRv8Quz/WmLD/JklwfwWuPU83HImj8b+ckZ0g1jyUtgcnr9hTvbPcRCPWKReNyGIdcY+Eo7z54yFdyBm/ZT9j12sCObk5tQgDsNgW7SuHfpLbI+tmW3DUy5kF9WH7ew/1nx2Dk/oMRf36DkciojrftrojRBy9iqzovk3/Ycd1Et3TCSPcyKwqq5rgA1OgYjtcp4vbFiQiHPtMRlVNVNDviiiKzGWbPuj/yYhDcdKqCaKbvs/XS41sJhi/eW4OzSAzBOuY6U2E5o6ELuYfNqDhTtwN8yumqV/U0H/5pkcFNrNg6Ip9Wjgtv2XXSjpx+p87xLpm6LPEpZGqd+IpDsJjR2DEke38H2LU/DXdB3YWvbO5d/kPH2wyahLgVLJfkk3ZzBWog18=
