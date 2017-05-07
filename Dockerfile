@@ -1,5 +1,6 @@
 FROM node:6
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
+ENV CI true
 
 RUN apt-get update -y -qq
 RUN apt-get install -y -qq python python-dev python-pip
@@ -13,5 +14,4 @@ RUN npm install --silent
 RUN npm rebuild node-sass
 
 RUN npm run build
-
 CMD gunicorn hello:app --pythonpath api
