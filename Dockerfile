@@ -14,4 +14,4 @@ RUN npm rebuild node-sass
 
 RUN npm run build
 
-ENTRYPOINT gunicorn hello:app --pythonpath api
+CMD gunicorn hello:app --pythonpath api

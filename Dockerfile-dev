@@ -12,6 +12,6 @@ RUN pip install -r requirements.txt
 RUN npm install --silent
 RUN npm rebuild node-sass
 
-ENTRYPOINT supervisord -c supervisord.conf
+CMD supervisord -c supervisord.conf
 EXPOSE 3000 8080
 VOLUME /app/src
