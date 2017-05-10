@@ -1,0 +1,3 @@
+ - Prevent console clearing on builds
+ - Add docker-compose
+ - Figure out deployment pipeline
