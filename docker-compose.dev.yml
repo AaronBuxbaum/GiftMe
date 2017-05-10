@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  node:
+    environment:
+      CI: '${CI}'
+    volumes:
+      - src:/app/src
+
+  python:
+    build: ./api/
+    depends_on:
+      - node
+    ports:
+      - 3000:3000
+    volumes:
+      - api:/app/api
