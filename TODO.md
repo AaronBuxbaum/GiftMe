@@ -1,3 +1,3 @@
- - Prevent console clearing on builds
- - Add docker-compose
- - Figure out deployment pipeline
+- Prevent console clearing on builds
+- Add docker-compose
+- Figure out deployment pipeline

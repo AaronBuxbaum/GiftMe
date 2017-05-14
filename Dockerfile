@@ -1,14 +1,16 @@
 FROM node:6
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
-#ENV CI true
+
+WORKDIR app
 
 COPY package.json package.json
+COPY public public
+COPY src src
 
 RUN npm install --silent
 RUN npm rebuild node-sass
 
-COPY src /app
-WORKDIR /app
-
 #RUN npm run build
-CMD unbuffer npm run start
+CMD npm run start
+
+EXPOSE 3000

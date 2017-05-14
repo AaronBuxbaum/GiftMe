@@ -1,8 +1,8 @@
 FROM python:latest
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
 
-WORKDIR /app/api
+COPY . .
 
 RUN pip install -r requirements.txt
 
-CMD unbuffer gunicorn hello:app
+CMD gunicorn hello:app
