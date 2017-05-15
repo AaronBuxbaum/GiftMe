@@ -14,8 +14,7 @@ A better way to buy gifts, via the power of machine learning.
 
 
 # To Develop: #
- - Create image: `docker build -t aaronbuxbaum/gift-me -f Dockerfile-dev .`
- - Start image: `docker run -dt -p 3000:3000 --name gift-me -v $(pwd)/src:/app/src aaronbuxbaum/gift-me`
+ - Start: `docker compose up -d (add `--build` to force recompilation)
  - View logs: `docker logs gift-me -f`
  - Browser URL: `localhost:3000`
 
