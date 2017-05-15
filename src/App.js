@@ -4,7 +4,7 @@ import './App.css';
 
 class App extends Component {
   componentDidMount() {
-    fetch('//localhost:5000/api/test')
+    fetch('/api/test1')
       .then(json => { console.log(json) });
   }
 

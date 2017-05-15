@@ -10,5 +10,4 @@ COPY src src
 RUN npm install --silent
 RUN npm rebuild node-sass
 
-#RUN npm run build
-CMD npm run start
+CMD npm run build

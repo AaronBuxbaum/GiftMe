@@ -1,22 +1,30 @@
 version: '3'
 
 services:
+  nginx:
+    build: ./nginx
+    links:
+      - node
+      - python
+    ports:
+      - 80:80
+        
   node:
     build: .
-    container_name: node
+    command: npm run start
     environment:
       CI: '${CI}'
-    ports:
-      - '3000:3000'
+    expose:
+      - 8000
     volumes:
       - ./src:/app/src
     working_dir: /app
 
   python:
     build: ./api
-    container_name: python
-    ports:
-      - '5000:5000'
+    command: python hello.py
+    expose:
+      - 3000
     volumes:
       - ./api:/app/api
     working_dir: /app/api
