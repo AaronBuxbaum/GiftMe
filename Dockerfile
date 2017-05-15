@@ -1,6 +1,7 @@
 FROM node:6
 MAINTAINER Aaron Buxbaum "me@aaronbuxbaum.com"
 
+ENV CI true
 WORKDIR app
 
 COPY package.json package.json
