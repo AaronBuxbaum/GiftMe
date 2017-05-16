@@ -11,4 +11,6 @@ COPY src src
 RUN npm install --silent
 RUN npm rebuild node-sass
 
-CMD npm run build
+CMD ["npm", "run", "build"]
+
+EXPOSE 3000

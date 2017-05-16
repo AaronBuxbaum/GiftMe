@@ -2,29 +2,30 @@ version: '3'
 
 services:
   nginx:
-    build: ./nginx
+    image: nginx:latest
     links:
       - node
       - python
     ports:
       - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
         
   node:
     build: .
+    container_name: node
     command: npm run start
     environment:
       CI: '${CI}'
-    expose:
-      - 8000
+    image: aaronbuxbaum/giftme_node:latest
     volumes:
       - ./src:/app/src
     working_dir: /app
 
   python:
     build: ./api
-    command: python hello.py
-    expose:
-      - 3000
+    container_name: python
+    image: aaronbuxbaum/giftme_python:latest
     volumes:
       - ./api:/app/api
     working_dir: /app/api
